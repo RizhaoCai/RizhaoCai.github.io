@@ -13,7 +13,7 @@ on:
     
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     
     steps:
       - uses: actions/checkout@v2
@@ -25,9 +25,8 @@ jobs:
           sudo apt-get -y update
           sudo apt-get -y install chromium-browser
           sudo apt-get -y install google-chrome-stable
-
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.8
 
@@ -36,19 +35,17 @@ jobs:
           cat >  ${GITHUB_WORKSPACE}/loconotion/example/example_site.toml  << EOF
           ${{ secrets.SITE_CONFIG }}
           EOF
-
       - name: Install and Run
         run: |
           cd ${GITHUB_WORKSPACE}/loconotion
           pip install -r requirements.txt
-          python loconotion example/example_site.toml > test.log 2>&1
-
+          python3 loconotion example/example_site.toml > test.log 2>&1
       - name: Deploy to Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: loconotion/dist
+          FOLDER: loconotion/dist/notion/
           CLEAN: true
           SINGLE_COMMIT: true
 
