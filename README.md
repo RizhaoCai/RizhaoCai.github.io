@@ -25,17 +25,17 @@ Examples 示例站 [leoncvlt.com](https://leoncvlt.com/)
 **Value:**<br>
 ```
 name = "notion"
-page = "https://www.notion.so/Loconotion-Example-Page-03c40xxxxxxxxxxxxxxxx9a8950ef"
-theme = "dark"
+page = "https://cairizhao.notion.site/cairizhao/CAI-Rizhao-af8a10165700400690e512c7cbca5539"
+theme = "light"
 [site]
 
   [[site.meta]]
   name = "title"
-  content = "Loconotion Test Site"
+  content = "Cai Rizhao's Homepage"
 
   [[site.meta]]
   name = "description"
-  content = "A static site generated from a Notion.so page using Loconotion"
+  content = "Cai Rizhao's Homepage"
 
   [site.fonts]
   site = 'Nunito'
