@@ -25,7 +25,7 @@ Examples 示例站 [leoncvlt.com](https://leoncvlt.com/)
 **Value:**<br>
 ```
 name = "notion"
-page = "https://cairizhao.notion.site/cairizhao/CAI-Rizhao-af8a10165700400690e512c7cbca5539"
+page = "https://cairizhao.notion.site/CAI-Rizhao-af8a10165700400690e512c7cbca5539"
 theme = "light"
 [site]
 
